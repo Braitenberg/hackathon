@@ -25,12 +25,12 @@ class Mail:
                 msg.encode("utf8")
             )
 
+            print('test')
 
         except Exception as e:
             return "Mail versturen is mislukt"
 
         server.quit()
 
-    mail("message")
 
 

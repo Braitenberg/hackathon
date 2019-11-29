@@ -10,6 +10,7 @@ def index():
 def sendmail():
    txt = request.args.get('mail') 
    mail.mail(txt)
+   print("mail sent")
    return "done" 
 if __name__ == "__main__":
     app.run(debug=True)
