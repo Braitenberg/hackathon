@@ -11,16 +11,56 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    
         <link rel="stylesheet" href="/static/style.css">
 
-        <div id="output"></div>
-	<button onclick="recognition.start()">Start</button>
-	<button onclick="recognition.stop()">Stop</button>
+        <nav class="navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                  <img src="http://db-events.nl/wp-content/uploads/2017/01/YoungCapital-logo-RGB-1024x1024.png" width="auto" height="80" style="margin-left: 30px;" alt="">
+                  <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiylKe51I_mAhVENOwKHTlzC1EQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCU8h6frfksLovmlKix1CO5Q&psig=AOvVaw2XMokTbBg3wPArnGWkSqfE&ust=1575125112892559" width="auto" height="80" style="float: right;" alt="">
+                </a>
+              </nav>
+              
+              <div class="background">
+                <div class="center">
+                  <div class="top-bar-center">
+                    <h3 class="title">
+                    Feedback system
+                  </h3>
+                    <div class="text-box text-center">
+                            <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Example select</label>
+                                    <select class="form-control" onchange="showBtn();" id="exampleFormControlSelect1">
+                                      <option onclick="showBtn()">Kies een vak</option>
+                                      <option onclick="showBtn()">React</option>
+                                      <option onclick="showBtn()">Database ontwikkeling</option>
+                                      <option onclick="showBtn()">Web ontwikkeling</option>
+                                      <option onclick="showBtn()">Python</option>
+                                      <option onclick="showBtn()">Java</option>
+                                    </select>
+                                  </div>
+                                  <div id="choice" class="speachbuttons">
+                            <button class="btn btn-success" onclick="recognition.start()">Start</button>
+                            <button class="btn btn-danger" onclick="recognition.stop()">Stop</button>
+
+                            <div id="output"></div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
 
 
         <script src="/static/script.js"></script>
+        <script>
+        function showBtn() {
+            var element = document.getElementById("choice");
+                element.classList.toggle("speachbuttons");
+        }
+        </script>
     </head>
     <body>
-    <button class="btn btn-primary" type="button" onclick="disableButton(this)" name="enable">Speach</button>
     </body>
 </html>
